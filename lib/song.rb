@@ -10,7 +10,7 @@ class Song
   def save
     @@all << self
   end
-  def initialize(name, artist=nil)
+  def initialize(name, artist=nil, genre=nil)
     @name = name
     if artist != nil
       @artist = artist
