@@ -60,6 +60,8 @@ class MusicLibraryController
   end
 
   def list_songs
+    num = 1 
+    ray = Song.all.sort_by{|m| m.name }
   end
   def list_artists
   end
