@@ -17,3 +17,4 @@ class Artist
     track = self.new(name)
     track.save
   end
+end 
