@@ -10,3 +10,6 @@ class Song
   def save
     @@all << self
   end
+  def self.destroy_all
+    @@all = []
+  end   
