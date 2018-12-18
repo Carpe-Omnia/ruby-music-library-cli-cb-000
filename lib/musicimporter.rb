@@ -69,9 +69,23 @@ class MusicLibraryController
   end
 
   def list_artists
+    num = 1
+    ray = Artist.all.sort_by{|m| m.name }
+    ray.each do |track|
+      puts "#{num}. #{track.name}"
+      num += 1
+    end
   end
+
   def list_genres
+    num = 1
+    ray = Genre.all.sort_by{|m| m.name }
+    ray.each do |track|
+      puts "#{num}. #{track.name}"
+      num += 1
+    end
   end
+
   def list_songs_by_artist
   end
   def list_songs_by_genre
