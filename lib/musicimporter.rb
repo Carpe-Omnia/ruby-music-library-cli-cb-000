@@ -123,7 +123,7 @@ class MusicLibraryController
     if song_num.to_i < 1 || song_num.to_i > ray.size
       self.do_nothing
     else
-      self.do_nothing
+      dex = song_num.to_i - 1
     end
   end
 
