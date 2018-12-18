@@ -11,15 +11,7 @@ class Song
   def save
     @@all << self
   end
-  def initialize(name, artist=nil, genre=nil)
-    @name = name
-    if artist != nil
-      artist=(artist)
-    end
-    if genre != nil
-      genre=(genre)
-    end
-  end
+
   def self.create(name)
     song = self.new(name)
     song.save
@@ -33,6 +25,15 @@ class Song
   def artist=(arg)
     @artist = arg
     arg.add_song(self)
+  end
+  def initialize(name, artist=nil, genre=nil)
+    @name = name
+    if artist != nil
+      artist=(artist)
+    end
+    if genre != nil
+      genre=(genre)
+    end
   end
   #def self.find_by_name(name)
   #  @@all.detect {|song| song.name == name }
