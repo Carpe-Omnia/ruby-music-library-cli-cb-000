@@ -88,6 +88,7 @@ class MusicLibraryController
 
   def list_songs_by_artist
     num = 1
+    puts "Please enter the name of an artist"
     bro = gets.chomp
     bruh = Artist.find_or_create_by_name(bro)
     ray = bruh.songs.sort_by{|m| m.name }
@@ -99,6 +100,7 @@ class MusicLibraryController
 
   def list_songs_by_genre
     num = 1
+    puts "Please enter the name of a genre:"
     bro = gets.chomp
     bruh = Genre.find_or_create_by_name(bro)
     ray = bruh.songs.sort_by{|m| m.name }
