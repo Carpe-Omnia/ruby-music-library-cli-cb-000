@@ -18,7 +18,7 @@ class Song
     song
   end
   def genre=(arg)
-    if arg.class = String
+    if arg.class == String
       temp = Genre.find_or_create_by_name(arg)
       @genre = temp
       temp.songs << self
@@ -29,7 +29,7 @@ class Song
     end
   end
   def artist=(arg)
-    if arg.class = String
+    if arg.class == String
       temp = Artist.find_or_create_by_name(arg)
       @artist = temp
       temp.add_song(self)
