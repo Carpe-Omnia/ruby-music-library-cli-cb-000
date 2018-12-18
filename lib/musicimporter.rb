@@ -5,6 +5,8 @@ class MusicImporter
   end
   def initialize(path)
     stuff = Dir.entries("#{path}")
+    stuff.delete(".")
+    stuff.delete("..")
     @path = path
     @files = stuff
   end
