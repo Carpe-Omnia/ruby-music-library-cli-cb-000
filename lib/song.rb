@@ -14,7 +14,7 @@ class Song
     @@all = []
   end
   def self.create(name)
-    track = self.new(name)
-    track.save
+    song = self.new(name)
+    song.save
   end
 end
