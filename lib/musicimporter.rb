@@ -37,7 +37,8 @@ class MusicLibraryController
     puts"What would you like to do?"
     input = "."
     while input != 'exit'
-      input = gets
+      input = gets.chomp
+      self.execute_input
     end
   end
 
