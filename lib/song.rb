@@ -23,9 +23,14 @@ class Song
     arg.songs = arg.songs.uniq
   end
   def artist=(arg)
-    temp = Artist.find_or_create_by_name(arg)
-    @artist = temp
-    temp.add_song(self)
+    if arg.class = string
+      temp = Artist.find_or_create_by_name(arg)
+      @artist = temp
+      temp.add_song(self)
+    else
+      @artist = arg
+      arg.add_song(self)
+    end
   end
   def initialize(name, artist=nil, genre=nil)
     @name = name
