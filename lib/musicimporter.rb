@@ -38,8 +38,10 @@ class MusicLibraryController
     input = "."
     while input != 'exit'
       input = gets.chomp
-      self.execute_input
+      self.execute_input(input)
     end
   end
+  def execute_input(input)
+
 
 end
