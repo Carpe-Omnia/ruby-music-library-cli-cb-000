@@ -119,7 +119,7 @@ class MusicLibraryController
 #      num += 1
   #  end
 
-    song_num = gets.chomp.to_i 
+    song_num = gets.chomp.to_i
     if song_num < 1 || song_num > ray.size
       self.do_nothing
     else
