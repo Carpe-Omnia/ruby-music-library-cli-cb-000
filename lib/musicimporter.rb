@@ -58,6 +58,7 @@ class MusicLibraryController
       self.do_nothing
     end
   end
-
+  def do_nothing
+  end
 
 end
