@@ -96,9 +96,18 @@ class MusicLibraryController
       num += 1
     end
   end
-  
+
   def list_songs_by_genre
+    num = 1
+    bro = gets.chomp
+    bruh = Genre.find_or_create_by_name(bro)
+    ray = bruh.songs.sort_by{|m| m.name }
+    ray.each do |track|
+      puts "#{num}. #{track.name}"
+      num += 1
+    end
   end
+
   def play_song
   end
   def do_nothing
