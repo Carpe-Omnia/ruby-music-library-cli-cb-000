@@ -18,3 +18,5 @@ class Genre
     gen = self.new(name)
     gen.save
   end
+
+end 
