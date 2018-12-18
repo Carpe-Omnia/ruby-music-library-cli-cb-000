@@ -20,7 +20,7 @@ class Song
   def genre=(arg)
     @genre = arg
     arg.songs << self
-    arg.song = arg.songs.uniq
+    arg.songs = arg.songs.uniq
   end
   def artist=(arg)
     @artist = arg
