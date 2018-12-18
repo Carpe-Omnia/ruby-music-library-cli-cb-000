@@ -1,3 +1,6 @@
 class Artist
   attr_accessor :name
-  @@all = [] 
+  @@all = []
+  def self.all
+    @@all
+  end
