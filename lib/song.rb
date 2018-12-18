@@ -18,10 +18,9 @@ class Song
     song
   end
   def genre=(arg)
-    temp = Genre.find_or_create_by_name(arg)
-    @genre = temp
-    temp.songs << self
-    temp.songs = arg.songs.uniq
+    @genre = arg
+    arg.songs << self
+    arg.songs = arg.songs.uniq
   end
   def artist=(arg)
     temp = Artist.find_or_create_by_name(arg)
