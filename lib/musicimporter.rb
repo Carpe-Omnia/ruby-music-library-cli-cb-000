@@ -123,7 +123,8 @@ class MusicLibraryController
     if song_num.to_i < 1 || song_num.to_i > ray.size
       self.do_nothing
     else
-      dex = song_num.to_i - 1
+      raw = ray[song_num.to_i - 1]
+      puts "Playing #{raw.name} by #{raw.artist.name}"
     end
   end
 
