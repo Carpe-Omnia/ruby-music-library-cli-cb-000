@@ -112,12 +112,13 @@ class MusicLibraryController
 
   def play_song
     num = 1
+    puts "Which song number would you like to play?"
     ray = Song.all.sort_by{|m| m.name }
     ray.each do |track|
       puts "#{num}. #{track.artist.name} - #{track.name} - #{track.genre.name}"
       num += 1
     end
-    puts "Which song number would you like to play?"
+    
     song_num = gets.chomp
     if song_num.to_i < 1 || song_num.to_i > ray.size
       self.do_nothing
