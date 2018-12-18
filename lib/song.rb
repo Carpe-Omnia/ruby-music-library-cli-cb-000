@@ -12,4 +12,8 @@ class Song
   end
   def self.destroy_all
     @@all = []
-  end   
+  end
+  def self.create(name)
+    track = self.new(name)
+    track.save
+  end
