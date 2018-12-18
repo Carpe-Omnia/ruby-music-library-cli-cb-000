@@ -37,7 +37,9 @@ class Song
       self.genre = genre
     end
   end
-  def new_from_filename(filename)
+  def self.new_from_filename(filename)
     fileshort = filename[0..-5]
     ray = fileshort.split(" - ")
+    track = self.new(ray[1], ray[0], ray[2])
+  end
 end
