@@ -14,7 +14,7 @@ class Artist
     @@all << self
   end
   def self.create(name)
-    track = self.new(name)
-    track.save
+    artist = self.new(name)
+    artist.save
   end
-end 
+end
