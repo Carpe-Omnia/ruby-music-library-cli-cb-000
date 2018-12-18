@@ -15,6 +15,9 @@ class Song
     if artist != nil
       @artist = artist
     end
+    if genre != nil
+      @genre = genre
+    end
   end
   def self.create(name)
     song = self.new(name)
