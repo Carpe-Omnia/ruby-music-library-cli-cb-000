@@ -21,7 +21,9 @@ class Artist
     artist
   end
   def add_song(track)
-    @songs << track
+    if !@songs.detect {|song| song == track}
+      @songs << track
+    end   
     track.artist = self
   end
   def genres
