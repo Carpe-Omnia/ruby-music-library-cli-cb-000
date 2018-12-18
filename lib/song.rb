@@ -12,9 +12,9 @@ class Song
   end
   def initialize(name, artist=nil)
     @name = name
-    if artist != nil 
-      @artist = artist 
-    end   
+    if artist != nil
+      @artist = artist
+    end
   end
   def self.create(name)
     song = self.new(name)
