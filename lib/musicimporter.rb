@@ -8,4 +8,5 @@ class MusicImporter
     @path = path
     @files = stuff
   end
+
 end
