@@ -33,7 +33,8 @@ class Song
       @artist = artist
     end
     if genre != nil
-      genre=(genre)
+      @genre = genre
+      #genre=(genre)
     end
   end
   #def self.find_by_name(name)
