@@ -18,13 +18,15 @@ class Song
     song
   end
   def genre=(arg)
-    if arg.class = String 
+    if arg.class = String
       temp = Genre.find_or_create_by_name(arg)
-      @genre = temp 
-      
-    @genre = arg
-    arg.songs << self
-    arg.songs = arg.songs.uniq
+      @genre = temp
+      temp.songs << self
+    else
+      @genre = arg
+      arg.songs << self
+      arg.songs = arg.songs.uniq
+    end
   end
   def artist=(arg)
     if arg.class = String
@@ -34,7 +36,7 @@ class Song
     else
       @artist = arg
       arg.add_song(self)
-      arg.songs = arg.songs.uniq 
+      arg.songs = arg.songs.uniq
     end
   end
   def initialize(name, artist=nil, genre=nil)
