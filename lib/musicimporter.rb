@@ -119,11 +119,11 @@ class MusicLibraryController
 #      num += 1
   #  end
 
-    song_num = gets.chomp
-    if song_num.to_i < 1 || song_num.to_i > ray.size
+    song_num = gets.chomp.to_i 
+    if song_num < 1 || song_num > ray.size
       self.do_nothing
     else
-      raw = ray[song_num.to_i - 1]
+      raw = ray[song_num - 1]
       puts "Playing #{raw.name} by #{raw.artist.name}"
     end
   end
