@@ -119,7 +119,7 @@ class MusicLibraryController
     end
     puts "Which song number would you like to play?"
     song_num = gets.chomp
-    if song_num < 1 || song_num > ray.size
+    if song_num.to_i < 1 || song_num.to_i > ray.size
       self.do_nothing
     else
       self.do_nothing
