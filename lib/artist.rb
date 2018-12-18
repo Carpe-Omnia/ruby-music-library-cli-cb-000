@@ -29,9 +29,10 @@ class Artist
     end
   end
   def genres
-    @songs.collect do |song|
+    value = @songs.collect do |song|
       song.genre
     end
+    value.uniq
   end
 
 end
