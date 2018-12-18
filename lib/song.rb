@@ -10,7 +10,6 @@ class Song
   def initialize(name)
     @name = name
   end
-
   def self.destroy_all
     @@all = []
   end
@@ -18,3 +17,4 @@ class Song
     track = self.new(name)
     track.save
   end
+end
