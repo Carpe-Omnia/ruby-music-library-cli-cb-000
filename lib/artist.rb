@@ -24,7 +24,9 @@ class Artist
     if @songs.detect {|song| song == track} == nil
       @songs << track
     end
-    track.artist = self
+    if !track.artist
+      track.artist = self
+    end
   end
   def genres
     @songs.collect do |song|
