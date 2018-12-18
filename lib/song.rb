@@ -39,4 +39,5 @@ class Song
   end
   def new_from_filename(filename)
     fileshort = filename[0..-5]
+    ray = fileshort.split(" - ")
 end
