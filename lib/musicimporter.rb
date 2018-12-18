@@ -67,7 +67,7 @@ class MusicLibraryController
       num += 1
     end
   end
-  end
+
   def list_artists
   end
   def list_genres
