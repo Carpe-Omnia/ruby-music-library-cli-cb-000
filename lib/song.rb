@@ -13,7 +13,6 @@ class Song
   def initialize(name)
     @name = name
   end
-
   def self.create(name)
     song = self.new(name)
     song.save
