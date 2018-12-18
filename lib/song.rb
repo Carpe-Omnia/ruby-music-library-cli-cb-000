@@ -25,12 +25,12 @@ class Song
     song.save
     song
   end
-  def genre= (arg)
+  def genre=(arg)
     @genre = arg
     arg.songs << self
     arg.song = arg.songs.uniq
   end
-  def artist= (arg)
+  def artist=(arg)
     @artist = arg
     arg.add_song(self)
   end
