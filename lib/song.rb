@@ -41,5 +41,11 @@ class Song
     fileshort = filename[0..-5]
     ray = fileshort.split(" - ")
     track = self.new(ray[1], ray[0], ray[2])
+    track
+  end
+  def self.create_from_filename(filename)
+    done = self.new_from_filename
+    done.save
+    done
   end
 end
