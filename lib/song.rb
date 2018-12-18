@@ -1,5 +1,5 @@
 class Song
-  extends Concerns::findable
+  extends Concerns::Findable
   attr_accessor :name , :artist, :genre
   @@all = []
   def self.all
