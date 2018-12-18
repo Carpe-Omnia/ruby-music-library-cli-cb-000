@@ -60,8 +60,13 @@ class MusicLibraryController
   end
 
   def list_songs
-    num = 1 
+    num = 1
     ray = Song.all.sort_by{|m| m.name }
+    ray.each do |track|
+      puts "#{num}. #{track.artist.name} - #{track.name} - #{track.genre.name}"
+      num += 1
+    end
+  end
   end
   def list_artists
   end
