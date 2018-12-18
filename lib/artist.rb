@@ -21,7 +21,7 @@ class Artist
     artist
   end
   def add_song(track)
-    if @songs.detect {|song| song == track} == nil 
+    if @songs.detect {|song| song == track} == nil
       @songs << track
     end
     track.artist = self
