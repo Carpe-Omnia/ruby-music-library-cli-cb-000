@@ -93,7 +93,7 @@ class MusicLibraryController
     bruh = Artist.find_or_create_by_name(bro)
     ray = bruh.songs.sort_by{|m| m.name }
     ray.each do |track|
-      puts "#{num}. #{track.name}"
+      puts "#{num}. #{track.name} - #{track.genre.name}"
       num += 1
     end
   end
@@ -105,7 +105,7 @@ class MusicLibraryController
     bruh = Genre.find_or_create_by_name(bro)
     ray = bruh.songs.sort_by{|m| m.name }
     ray.each do |track|
-      puts "#{num}. #{track.name}"
+      puts "#{num}. #{track.artist.name} - #{track.name}"
       num += 1
     end
   end
