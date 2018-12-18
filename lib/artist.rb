@@ -20,5 +20,6 @@ class Artist
     artist
   end
   def add_song(track)
-
+    @songs << track
+  end
 end
